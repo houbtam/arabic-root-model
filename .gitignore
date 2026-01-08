@@ -1,22 +1,83 @@
-### AL ###
-#Template for AL projects for Dynamics 365 Business Central
-#launch.json folder
-.vscode/
-#Cache folder
-.alcache/
-#Symbols folder
-.alpackages/
-#Snapshots folder
-.snapshots/
-#Testing Output folder
-.output/
-#Extension App-file
-*.app
-#Rapid Application Development File
-rad.json
-#Translation Base-file
-*.g.xlf
-#License-file
-*.flf
-#Test results file
-TestResults.xml
+# ============================================
+# .gitignore لمشروع النموذج اللغوي العربي القائم على الجذور
+# ============================================
+
+# ----- بايثون -----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ----- بيئات بايثون الافتراضية -----
+# (اختر ما يناسبك أو احذف ما لا تحتاجه)
+venv/
+.venv/
+env/
+.conda/
+.python-version
+
+# ----- إعدادات IDEs و Editores -----
+# VSCode / Codespaces (احتفظ بالإعدادات المهمة إذا أردت)
+.vscode/*
+!.vscode/settings.json  # يمكن الاحتفاظ بإعدادات المشروع
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE أخرى
+.idea/
+*.swp
+*.swo
+*~
+
+# ----- بيانات المشروع والمخرجات -----
+# نتائج التحليل (قد تحتوي على بيانات كبيرة)
+results/
+!results/.gitkeep  # إذا أردت مجلد results فارغ في المستودع
+
+# نماذج مدربة (كبيرة الحجم)
+models/*.pth
+models/*.pt
+models/*.h5
+models/*.bin
+
+# بيانات محملة/مولدة
+data/processed/
+data/generated/
+
+# ----- ملفات النظام -----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ----- ملفات المشروع المؤقتة -----
+# إعدادات بيئة العمل السابقة (إذا لم تعد بحاجة لها)
+arabic-language.vscode-ar
+
+# ----- ملفات التجارب الشخصية -----
+experiments/
+scratch/
+temp/
+test_*.py
+playground*.py
